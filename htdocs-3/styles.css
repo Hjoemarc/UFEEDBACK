@@ -1,0 +1,208 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color:#121111; /* Dim light background */
+    color: #f1f1f1; /* Light text for better contrast */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Neon Blue Effect */
+.neon-border {
+    border: 2px solid rgba(0, 183, 255, 0.6); /* Neon blue border */
+    box-shadow: 0 0 10px rgba(0, 183, 255, 0.75), 
+                0 0 20px rgba(0, 183, 255, 0.5), 
+                0 0 40px rgba(0, 183, 255, 0.5);
+}
+
+/* Navbar */
+.navbar {
+    background-color: #030303; /* Dark dim background for navbar */
+    color: #f1f1f1;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid rgba(0, 183, 255, 0.6); /* Neon blue border */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+}
+
+.navbar .nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-links a:hover {
+    color: #00b7ff; /* Neon blue on hover */
+}
+
+/* Main Content */
+.main-content {
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #f1f1f1;
+    margin-bottom: 20px;
+}
+
+/* Admin Actions */
+.admin-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.admin-actions button {
+    background-color:#292828; /* Darker background for buttons */
+    color: #f1f1f1; /* Light text */
+    border: 2px solid rgba(0, 183, 255, 0.6); /* Neon blue border */
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 183, 255, 0.75);
+}
+
+.admin-actions button:hover {
+    background-color: #333; /* Darker on hover */
+    color: #00b7ff; /* Neon blue text on hover */
+}
+
+/* Office List Table */
+.office-list {
+    margin-top: 20px;
+    background-color: #333; /* Dimmed background for table */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid rgba(0, 183, 255, 0.6); /* Neon blue border */
+}
+
+.office-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.office-list th, .office-list td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #444; /* Dimmed lines */
+}
+
+.office-list th {
+    background-color: #1b1b1b;
+    color: #00b7ff;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(0, 183, 255, 0.6); /* Neon blue border */
+}
+
+.office-list td {
+    font-size: 1rem;
+    color: #e1e1e1;
+}
+
+.office-list tr:hover {
+    background-color: #444; /* Dim light hover effect */
+}
+
+.office-list button {
+    background-color: #1b1b1b; /* Darker background for buttons */
+    color: #f1f1f1; /* Light text */
+    border: 2px solid rgba(0, 183, 255, 0.6); /* Neon blue border */
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 183, 255, 0.75);
+}
+
+.office-list button:hover {
+    background-color: #333; /* Darker on hover */
+    color: #00b7ff; /* Neon blue text on hover */
+}
+
+/* Drawer Menu */
+.drawer {
+    border-left: 2px solid rgba(0, 183, 255, 0.6); /* Neon blue border */
+    background-color:#1b1b1b;
+    color: #fff;
+    padding: 20px;
+}
+
+.drawer a {
+    color: #00b7ff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.drawer a:hover {
+    color: #0099cc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar h1 {
+        font-size: 1.5rem;
+    }
+
+    .admin-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .admin-actions button {
+        width: 100%;
+    }
+
+    .office-list table, .office-list th, .office-list td {
+        font-size: 0.9rem;
+    }
+
+    .office-list td {
+        padding: 12px;
+    }
+}
